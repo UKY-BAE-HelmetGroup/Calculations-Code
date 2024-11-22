@@ -1,6 +1,8 @@
 # Calculations-Code
-The file below is a python script that is used to calculate the spring compression needed for the proper impact velocity at the given initial conditions of our testing systems.
+The file below is a python script that is used to calculate the spring compression needed for the proper impact velocity at the given initial conditions of our testing systems. This will/can be used as a resource when using our Helmet Testing Apparatus.
 
+
+```python
 
 '''
 Projectile Motion Calculations for Equestrian Helmet Testing Group
@@ -146,17 +148,19 @@ print(f"y_value in meters is {y_value_m:.4f} m")
 springstretch = (((.5*m*(V_endoftrack)**2)-(m*g*y_value_m))/(.5*k))**.5
 print(f"springstretch needed in meters is {springstretch:.4f} m")
 
-#Time calculation
+
+#Part of Bracing Calculations based on cart motion
+#Force exerted
 Force = k*springstretch
 print(f"Force in Newtons is {Force:.4f} N")
 
 #acceleration based on force and mass of the cart
 acceleration = Force/m
-print(f"Force in Newtons is {acceleration:.4f} m/s^2")
+print(f"Acceleration is {acceleration:.4f} m/s^2")
 
 #finding distance traveled on track
 distance = (href)/(math.sin(theta))*.0254
-print(f"Distance in meters is {distance:.4f} m")
+print(f"Distance travled on track in meters is {distance:.4f} m")
 
 # Check if acceleration is a complex number
 if isinstance(acceleration, complex):
@@ -170,5 +174,10 @@ if isinstance(acceleration, complex):
         print("Error: The acceleration must be greater than zero.")
 
 pass
+
+    
+
+```
+
 
     
